@@ -13,8 +13,8 @@ namespace ControleFinanceiro.Data
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.ApplyConfiguration(new TransacaoMapeamento);
+        {   
+            modelBuilder.ApplyConfiguration(new TransacaoMapeamento());
             //modelBuilder.ApplyConfiguration(new ProfessorMapeamento());
         }
 
