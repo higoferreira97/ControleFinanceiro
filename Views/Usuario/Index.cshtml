@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "_LayoutLogin";
+}
+ <h2>Faça login</h2>
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<form  class="login" method="post" asp-controller="Usuario" asp-action="ValidarLogin">
+    <div class="col-md-6 justify-content-center">
+        <label for="inputEmail4" class="form-label">Usuário</label>
+        <input type="email" class="form-control" id="inputEmail4" name="email" required>
+        <label for="inputPassword4" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="inputPassword4" name="senha" required>
+    </div>
+
+    <div class="d-flex justify-content-center btn-login">
+        <button class="btn btn-primary" type="submit">Entrar</button>
+        <a asp-action="Registrar" asp-controller="Usuario" class="btn btn-link">Cadastrar</a>
+    </div>
+    
+
+
+   
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div style="color: red;">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <p>@error.ErrorMessage</p>
+            }
+        </div>
+    }
+ </form> 
+
+@*<div class="container">
+<h2>Faça Login</h2>
+
+
+<form>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email">
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="senha">
+    </div>
+    <div class="d-flex justify-content-center">
+     <button type="submit" class="btn btn-primary w-25 mx-2">Entrar</button>
+     <a asp-action="Registrar" asp-controller="Usuario"class="btn w-25">cadastrar-se</a>
+    </div>
+    
+</form>
+</div> *@

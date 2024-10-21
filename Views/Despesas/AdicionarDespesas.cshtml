@@ -1,0 +1,39 @@
+﻿@model DespesasModel
+
+<form class="adicionar" asp-controller="Despesas" asp-action="IncluirDespesas" method="post">
+
+    @* <div class="mb-3 col-md-2">
+        <label class="form-label">Data</label>
+        <input type="date" asp-for="DataTransacao" class="form-control" />
+    </div> *@
+
+    <div class="mb-3 col-md-2">
+        <label class="form-label">Valor</label>
+        <input type="text" asp-for="Valor" class="form-control" />
+    </div>
+
+    <div class="mb-3 col-md-2">
+        <label class="form-label">Categoria</label>
+        <select asp-for="Categoria" class="form-select">
+            <option value="">Selecione</option>
+            @foreach (var categoria in Enum.GetValues(typeof(DespesasModel.CategoriaDespesa)))
+            {
+                <option value="@categoria">@categoria</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3 col-md-2">
+        <label class="form-label">Descrição</label>
+        <input type="text" asp-for="Descricao" class="form-control" />
+    </div>
+
+    <div class="text-left">
+        <button type="submit" class="btn btn-primary">Adicionar</button>
+    </div>
+
+</form>
+@if (ViewData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success mt-3">@ViewData["SuccessMessage"]</div>
+}

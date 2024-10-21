@@ -1,4 +1,5 @@
 using ControleFinanceiro.Data;
+using ControleFinanceiro.Data.Repositorio;
 using ControleFinanceiro.Data.Repositorio.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,7 +11,8 @@ builder.Services.AddControllersWithViews();
 var connectionstring = builder.Configuration.GetConnectionString("StringConexao");
 builder.Services.AddDbContext<BancoContexto>(options => options.UseSqlServer(connectionstring));
 
-builder.Services.AddScoped<ITransacaoRepositorio, TransacaoRepositorio>();
+builder.Services.AddScoped<IDespesasRepositorio, DespesasRepositorio>();
+builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 
 var app = builder.Build();
 
@@ -31,6 +33,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Usuario}/{action=Index}/{id?}");
 
 app.Run();

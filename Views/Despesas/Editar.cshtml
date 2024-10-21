@@ -1,0 +1,31 @@
+﻿@model DespesasModel
+<form asp-controller="Despesas" asp-action="EditarDespesas" method="post">
+
+    <div class="mb-3 col-md-2">
+        <label class="form-label">Data</label>
+        <input type="date" asp-for="DataTransacao " class="form-control">
+    </div>
+
+    <div class="mb-3 col-md-2">
+        <label class="form-label">Valor</label> 
+        <input type="text" asp-for="Valor" class="form-control">
+    </div>
+
+    <div class="mb-3 col-md-2">
+        <label class="form-label">Categoria</label>
+        <input type="text" asp-for="Categoria" class="form-control">
+    </div>
+
+    <div class="mb-3 col-md-2">
+        <label class="form-label">Descricao</label>
+        <input type="text" asp-for="Descricao" class="form-control">
+    </div>
+
+    <div class="text-left">
+        <button type="submit" class="btn btn-primary">Editar</button>
+        <a class="btn btn-primary" type="button" asp-controller="Despesas" asp-action="Index"> Voltar</a>
+    </div>
+   
+
+
+</form>

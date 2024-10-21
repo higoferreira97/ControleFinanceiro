@@ -20,3 +20,43 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.login {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    flex-direction: column;
+    border-radius: 7px;
+}
+
+.cadastro {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    flex-direction: column;
+    border-radius: 7px;
+}
+
+.btn-login{
+    margin-top: 12px;
+}
+
+.btn-voltar{
+    background-color:#36d6e1;
+    border:1px solid black;
+    
+}
+
+.adicionar {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    flex-direction: column;
+    border-radius: 7px;
+}

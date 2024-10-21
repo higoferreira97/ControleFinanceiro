@@ -14,11 +14,11 @@ namespace ControleFinanceiro.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {   
-            modelBuilder.ApplyConfiguration(new TransacaoMapeamento());
-            //modelBuilder.ApplyConfiguration(new ProfessorMapeamento());
+            modelBuilder.ApplyConfiguration(new DespesasMapeamento());
+            
         }
 
-        public DbSet<Transacao> Transacao { get; set; }
-        //public DbSet<Professor> Professor { get; set; }
+        public DbSet<DespesasModel> Despesas { get; set; }
+        public DbSet<UsuarioModel> Usuario { get; set; }
     }
 }
