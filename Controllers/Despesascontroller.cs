@@ -1,5 +1,4 @@
-﻿using ControleFinanceiro.Data;
-using ControleFinanceiro.Data.Repositorio.Interfaces;
+﻿using ControleFinanceiro.Data.Repositorio.Interfaces;
 using ControleFinanceiro.Models;
 using Microsoft.AspNetCore.Mvc;
 
