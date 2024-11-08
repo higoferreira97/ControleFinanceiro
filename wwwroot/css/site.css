@@ -21,7 +21,7 @@ body {
   margin-bottom: 60px;
 }
 
-.login {
+/*.login {
     padding: 100px;
     display: flex;
     justify-content: center;
@@ -59,4 +59,155 @@ body {
     margin-top: 15px;
     flex-direction: column;
     border-radius: 7px;
+}
+-------------------------------------------------------*/
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do fundo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #e66465, #9198e5);
+}
+
+/* Estilo do container de login */
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+    /* Título */
+    .login-box h1 {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Estilo dos campos de entrada */
+    .login-box, input[type="email"],
+    .login-box input[type="password"] {
+        width: 100%;
+        padding: 0.75rem;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    /* Estilo do botão de login */
+    .login-box button {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(45deg, #e66465, #9198e5);
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        .login-box button:hover {
+            background: linear-gradient(45deg, #9198e5, #e66465);
+        }
+
+    /* Links para recuperação de senha e criação de conta */
+    .login-box a{
+        display: block;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #555;
+        text-decoration: none;
+    }
+
+        .login-box a:hover {
+            color: #333;
+        }
+
+/*Tela defs cadastro*/
+
+.cadastro-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Título */
+.cadastro-box h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo dos campos de entrada */
+.cadastro-box, input[type="email"],
+.cadastro-box, input[type="text"],
+.cadastro-box input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+    /* Estilo do botão de login */
+    .cadastro-box button {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(45deg, #e66465, #9198e5);
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        .cadastro-box button:hover {
+            background: linear-gradient(45deg, #9198e5, #e66465);
+        }
+
+    /* Links para recuperação de senha e criação de conta */
+    .cadastro-box a {
+        display: block;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #555;
+        text-decoration: none;
+    }
+
+        .cadastro-box a:hover {
+            color: #333;
+        }
+.btn-voltar {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #e66465, #9198e5);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-voltar button:hover {
+background: linear-gradient(45deg, #9198e5, #e66465);
 }

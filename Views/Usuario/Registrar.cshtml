@@ -1,7 +1,27 @@
 ﻿@{
     Layout = "_LayoutLogin";
 }
-<h2>Cadastre-se</h2>
+<div class="cadastro-box">
+    <h1>Cadastre-se</h1>
+    <form method="post" asp-controller="Usuario" asp-action="Cadastrar">
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <button type="submit">Criar contar</button>
+    </form>
+   @*  <button type="button" onclick="window.location.href='@Url.Action("Index", "Usuario")'">Voltar</button> *@
+    <a class="btn-voltar" type="button" asp-action="Index" asp-controller="Usuario">Voltar</a>
+</div>
+
+
+
+
+
+
+
+
+
+@* <h2>Cadastre-se</h2>
 <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 <form class="login" method="post" asp-controller="Usuario" asp-action="Cadastrar">
     <div class="col-md-6 justify-content-center">
@@ -31,7 +51,7 @@
         </div>
     }
 </form>
-
+ *@
 
 
 

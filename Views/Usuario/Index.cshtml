@@ -1,7 +1,33 @@
 ﻿@{
     Layout = "_LayoutLogin";
 }
- <h2>Faça login</h2>
+
+<div class="login-box">
+    <h1>Bem-vindo</h1>
+    <form method="post" asp-controller="Usuario" asp-action="ValidarLogin">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+        <a asp-action="Registrar" asp-controller="Usuario">Criar uma conta</a>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* @{
+    Layout = "_LayoutLogin";
+}
+  <h2>Faça login</h2>
 <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 <form  class="login" method="post" asp-controller="Usuario" asp-action="ValidarLogin">
     <div class="col-md-6 justify-content-center">
@@ -15,10 +41,10 @@
         <button class="btn btn-primary" type="submit">Entrar</button>
         <a asp-action="Registrar" asp-controller="Usuario" class="btn btn-link">Cadastrar</a>
     </div>
-    
 
 
-   
+
+
     @if (!ViewData.ModelState.IsValid)
     {
         <div style="color: red;">
@@ -28,25 +54,8 @@
             }
         </div>
     }
- </form> 
+ </form>
 
-@*<div class="container">
-<h2>Faça Login</h2>
+ ______________________________________________________________________________*@
 
 
-<form>
-    <div class="mb-3">
-        <label for="email" class="form-label">Email:</label>
-        <input type="email" class="form-control" id="email">
-    </div>
-    <div class="mb-3">
-        <label for="senha" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="senha">
-    </div>
-    <div class="d-flex justify-content-center">
-     <button type="submit" class="btn btn-primary w-25 mx-2">Entrar</button>
-     <a asp-action="Registrar" asp-controller="Usuario"class="btn w-25">cadastrar-se</a>
-    </div>
-    
-</form>
-</div> *@
